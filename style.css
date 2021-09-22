@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0460f3, #0f79f3);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 6em;
+  color: #fff;
+  font-family: "Poppins";
+}
+
+
+/* CONTAINER */
+
+
+.container {
+  width: 40%;
+  min-width: 450px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px 40px;
+}
+
+/* NOVA TAREFA */
+
+
+#nova-tarefa {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+#nova-tarefa input {
+  width: 70%;
+  height: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  border: 2px solid #d1d3d4;
+  padding: 12px;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+#nova-tarefa input:focus {
+  outline: none;
+  border-color: #0f79f3;
+}
+
+#nova-tarefa button {
+  position: relative;
+  float: right;
+  width: 20%;
+  height: 45px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: none;
+  background-color: #106afa;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 230ms;
+}
+
+#nova-tarefa button:hover {
+  background-color: #fff;
+  color: #106afa;
+  border: 2px solid #106afa;
+  font-weight: 600;
+}
+
+
+#tarefas {
+  background-color: #fff;
+  padding: 30px 20px;
+  margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: relative;
+  font-family: "Poppins";
+}
+
+.tarefas {
+  background-color: #fff;
+  height: 50px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #d1d3d4;
+  cursor: pointer;
+}
+
+.tarefas span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+
+/* BOTÕES */
+
+.tarefas button {
+  background-color: #0460f3;
+  color: #fff;
+  height: 110%;
+  width: 45px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 230ms;
+}
+
+
+.tarefas button ion-icon {
+  font-size: 1.7rem;
+  transition: 230ms;
+}
+
+
+.tarefas button:hover {
+  background-color: #fff;
+  color: #106afa;
+  border: 2px solid #106afa;
+  font-weight: 600;
+}
+
+.tarefas button ion-icon:hover {
+  background-color: #fff;
+  color: #106afa;
+}
+
+
+/* ATIVO RISCADO */
+
+.completado {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* ANIMAÇÃO  */
+
+.container {
+  animation-name: move;
+  animation-duration: 500ms;
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+  }
+}
